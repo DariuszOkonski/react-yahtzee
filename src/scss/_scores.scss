@@ -1,6 +1,30 @@
-.scores {
-    background-color: green;
-    h1 {
-        color: blue;
+.scores-container {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+
+    .scores {
+        margin: 1em 0;
+
+        &__header {
+            font-size: 1.4rem;
+            text-align: center;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #000;
+            font-weight: 300;
+        }
+
+        &__line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid #000;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
     }
 }

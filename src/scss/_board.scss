@@ -4,7 +4,7 @@
     
     &__header {
         text-align: center;
-        padding: 1rem;
+        padding: 0.5rem;
         
         .header {
             font-weight: 100;
@@ -20,7 +20,7 @@
         align-items: center;
 
         .dice {
-            padding: .5rem;
+            padding: .2rem;
             font-size: 3.5rem;
             color: #fff;
             cursor: pointer;
@@ -35,7 +35,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
 
         .button {
             background: rgb(1,196,252);
