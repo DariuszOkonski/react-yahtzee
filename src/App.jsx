@@ -1,9 +1,12 @@
 import React from 'react';
+import Board from './components/Board';
+import Scores from './components/Scores';
 
 function App() {
   return (
     <div className="App">
-      <h1>Yahtzee</h1>
+      <Board />
+      <Scores />
     </div>
   );
 }

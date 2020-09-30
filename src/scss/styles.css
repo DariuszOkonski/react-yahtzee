@@ -15,11 +15,27 @@ body {
 }
 
 .App {
-  background-color: yellow;
+  background-color: #fff;
   -webkit-box-shadow: 10px 10px 61px -19px rgba(0, 0, 0, 0.75);
           box-shadow: 10px 10px 61px -19px rgba(0, 0, 0, 0.75);
   max-width: 700px;
   min-width: 300px;
   width: 90vw;
+}
+
+.board {
+  background-color: red;
+}
+
+.board h1 {
+  color: green;
+}
+
+.scores {
+  background-color: green;
+}
+
+.scores h1 {
+  color: blue;
 }
 /*# sourceMappingURL=styles.css.map */
