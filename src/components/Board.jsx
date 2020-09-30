@@ -9,24 +9,24 @@ const Board = () => {
 
             <div className="board__dices">
                 <div className="dice">
-                    <i class="fas fa-dice-one"></i>
+                    <i className="fas fa-dice-one"></i>
                 </div>
                 <div className="dice">
-                    <i class="fas fa-dice-two"></i>
+                    <i className="fas fa-dice-two"></i>
                 </div>
                 <div className="dice">
-                    <i class="fas fa-dice-three"></i>
+                    <i className="fas fa-dice-three"></i>
                 </div>
                 <div className="dice">
-                    <i class="fas fa-dice-four"></i>
+                    <i className="fas fa-dice-four"></i>
                 </div>
                 <div className="dice">
-                    <i class="fas fa-dice-six"></i>
+                    <i className="fas fa-dice-six"></i>
                 </div>
             </div>
 
             <div className="board__button">
-                <button>2 Rolls Left</button>
+                <button className="button">2 Rolls Left</button>
             </div>
         </section>
      );
