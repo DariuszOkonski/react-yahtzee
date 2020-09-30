@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap");
 body {
   background: #020024;
   background: linear-gradient(225deg, #060244 3%, #091379 38%, #00d4ff 100%);
   width: 100%;
   height: 100vh;
+  font-family: 'Lato', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,9 +37,33 @@ body {
 
 .board__header .header {
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 2px;
   color: #fff;
+}
+
+.board__dices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.board__dices .dice {
+  padding: .5rem;
+  font-size: 3.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.board__dices .dice .fas {
+  -webkit-box-shadow: 10px 10px 58px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 58px -11px rgba(0, 0, 0, 0.75);
 }
 
 .scores {

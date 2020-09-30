@@ -8,11 +8,21 @@ const Board = () => {
             </div>
 
             <div className="board__dices">
-                <div className="dice">1</div>
-                <div className="dice">2</div>
-                <div className="dice">3</div>
-                <div className="dice">4</div>
-                <div className="dice">5</div>
+                <div className="dice">
+                    <i class="fas fa-dice-one"></i>
+                </div>
+                <div className="dice">
+                    <i class="fas fa-dice-two"></i>
+                </div>
+                <div className="dice">
+                    <i class="fas fa-dice-three"></i>
+                </div>
+                <div className="dice">
+                    <i class="fas fa-dice-four"></i>
+                </div>
+                <div className="dice">
+                    <i class="fas fa-dice-six"></i>
+                </div>
             </div>
 
             <div className="board__button">

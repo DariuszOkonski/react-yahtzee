@@ -8,9 +8,26 @@
         
         .header {
             font-weight: 100;
-            font-size: 2rem;
+            font-size: 3rem;
             letter-spacing: 2px;
             color: #fff;
+        }
+    }
+
+    &__dices {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .dice {
+            padding: .5rem;
+            font-size: 3.5rem;
+            color: #fff;
+            cursor: pointer;
+
+            .fas {
+                box-shadow: 10px 10px 58px -11px rgba(0,0,0,0.75);
+            }
         }
     }
 }
