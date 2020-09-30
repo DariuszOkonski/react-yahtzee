@@ -24,11 +24,20 @@ body {
 }
 
 .board {
-  background-color: red;
+  background: #620245;
+  background: linear-gradient(100deg, #620245 3%, #b50ba3 46%, #d100ff 100%);
 }
 
-.board h1 {
-  color: green;
+.board__header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.board__header .header {
+  font-weight: 100;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
 .scores {
