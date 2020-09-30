@@ -6,7 +6,7 @@ const Scores = () => {
             
             <section className="scores">
                 <h2 className="scores__header">Upper</h2>
-                <div className="scores__line">
+                <div className="scores__line scores__line--crossed">
                     <span>Ones</span>
                     <span>1 point per 1</span>
                 </div>
@@ -14,7 +14,7 @@ const Scores = () => {
                     <span>Twos</span>
                     <span>2 points per 2</span>
                 </div>
-                <div className="scores__line">
+                <div className="scores__line" >
                     <span>Threes</span>
                     <span>3 points per 3</span>
                 </div>

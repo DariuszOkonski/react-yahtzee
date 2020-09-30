@@ -125,8 +125,21 @@ body {
           align-items: center;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid #000;
-  margin-bottom: 0.2rem;
   font-size: 1rem;
   font-weight: 300;
+  cursor: pointer;
+}
+
+.scores-container .scores__line:hover {
+  background-color: #e2f2fd;
+}
+
+.scores-container .scores__line--crossed, .scores-container .scores__line--crossed:hover {
+  background-color: #62befc;
+  cursor: not-allowed;
+}
+
+.scores-container .scores__line--crossed span, .scores-container .scores__line--crossed:hover span {
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -22,9 +22,24 @@
             align-items: center;
             padding-bottom: 0.2rem;
             border-bottom: 1px solid #000;
-            margin-bottom: 0.2rem;
             font-size: 1rem;
             font-weight: 300;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(226, 242, 253);
+            }
+
+            &--crossed, 
+            &--crossed:hover {
+                background-color: rgb(98, 190, 252);
+                cursor: not-allowed;
+
+                span {
+                    text-decoration: line-through;
+                }
+            }
+
         }
     }
 }
