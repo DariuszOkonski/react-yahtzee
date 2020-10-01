@@ -49,6 +49,11 @@
             font-size: 1.2rem;
             font-weight: 100;
             outline: none;
+
+            &-disabled {
+                background: rgb(71, 71, 71);
+                cursor: not-allowed;
+            }
         }
 
     }

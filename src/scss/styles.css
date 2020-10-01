@@ -93,6 +93,11 @@ body {
   outline: none;
 }
 
+.board__button .button-disabled {
+  background: #474747;
+  cursor: not-allowed;
+}
+
 .scores-container {
   background-color: #fff;
   padding: 1rem 2rem;
