@@ -23,7 +23,7 @@ const drawDice = () => {
     return Math.floor(Math.random() * numberOfeyes) + 1;
 }
 
-export const getDices = () => {
+export const getInitialDices = () => {
     const dices = [];
     for (let i = 0; i < NumberOfDices; i++) {
         const dice = {
@@ -33,6 +33,13 @@ export const getDices = () => {
         }
         dices.push(dice);
     }
+
+    return dices;
+}
+
+export const getDices = (dices) => {
+    console.log('TODO: getDices');
+    console.log(dices);
 
     return dices;
 }
