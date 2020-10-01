@@ -1,5 +1,5 @@
 import React from 'react'
-import { translateNumberToString, getDices } from '../auxiliaryFunctions/auxiliary';
+import { translateNumberToString } from '../auxiliaryFunctions/auxiliary';
 
 const Dice = ({dice}) => {
     const diceNumber = translateNumberToString(dice);

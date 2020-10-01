@@ -1,4 +1,5 @@
 const NumberOfDices = 5;
+const numberOfeyes = 6;
 export const translateNumberToString = (number) => {
     switch (number) {
         case 1:
@@ -19,7 +20,7 @@ export const translateNumberToString = (number) => {
 }
 
 const drawDice = () => {
-    return Math.floor(Math.random() * 6) + 1;
+    return Math.floor(Math.random() * numberOfeyes) + 1;
 }
 
 export const getDices = () => {
