@@ -10,13 +10,13 @@ const AppContextProvider = (props) => {
     const [rolls, setRolls] = useState(false);
 
     const handleRollDices = () => {
-        setDices(getDices());
         toggleRolls();        
     }
-
+    
     const toggleRolls = () => {
         setRolls(true);
         setTimeout(() => {
+            setDices(getDices());
             setRolls(false);
         }, RollingTime);
     }
