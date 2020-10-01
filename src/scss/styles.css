@@ -66,6 +66,11 @@ body {
           box-shadow: 10px 10px 58px -11px rgba(0, 0, 0, 0.75);
 }
 
+.board__dices .dice-rolling {
+  -webkit-animation: rolling 1s linear infinite;
+          animation: rolling 1s linear infinite;
+}
+
 .board__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,6 +101,28 @@ body {
 .board__button .button-disabled {
   background: #474747;
   cursor: not-allowed;
+}
+
+@-webkit-keyframes rolling {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rolling {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .scores-container {
