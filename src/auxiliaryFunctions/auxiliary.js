@@ -1,3 +1,4 @@
+const NumberOfDices = 5;
 export const translateNumberToString = (number) => {
     switch (number) {
         case 1:
@@ -17,6 +18,15 @@ export const translateNumberToString = (number) => {
     }
 }
 
-export const drawADice = () => {
+const drawDice = () => {
     return Math.floor(Math.random() * 6) + 1;
+}
+
+export const getDices = () => {
+    const dices = [];
+    for (let i = 0; i < NumberOfDices; i++) {
+        dices.push(drawDice());
+    }
+
+    return dices;
 }
