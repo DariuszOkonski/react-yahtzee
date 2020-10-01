@@ -1,4 +1,5 @@
-$gray-color: rgb(71, 71, 71);
+// $gray-color: rgb(71, 71, 71);
+$gray-color: rgb(134, 133, 133);
 
 .board {
     background: rgb(98,2,69);
@@ -34,6 +35,10 @@ $gray-color: rgb(71, 71, 71);
 
         .dice-rolling {
             animation: rolling 1s linear infinite;
+        }
+
+        .dice-freeze {
+            color: $gray-color;
         }
     }
 

@@ -12,6 +12,10 @@ const AppContextProvider = (props) => {
     const handleRollDices = () => {
         toggleRolls();        
     }
+
+    const handleToggleDice = (index) => {
+        
+    }
     
     const toggleRolls = () => {
         setRolls(true);

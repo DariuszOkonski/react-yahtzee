@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { translateNumberToString } from '../auxiliaryFunctions/auxiliary';
 import { AppContext } from '../contexts/appContext';
 
-const Dice = ({dice}) => {
+const Dice = ({id, active, number}) => {
     const { rolls } = useContext(AppContext);
-    const diceNumber = translateNumberToString(dice);
+    const diceNumber = translateNumberToString(number);
 
     return ( 
-        <div className={`dice ${rolls && 'dice-rolling'}`}>
+        <div className={`dice ${active && (rolls && 'dice-rolling')} ${!active && 'dice-freeze'}`}>
             <i className={`fas fa-dice-${diceNumber}`}></i>
         </div>
      );

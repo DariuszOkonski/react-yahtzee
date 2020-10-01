@@ -71,6 +71,10 @@ body {
           animation: rolling 1s linear infinite;
 }
 
+.board__dices .dice-freeze {
+  color: #868585;
+}
+
 .board__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,7 +103,7 @@ body {
 }
 
 .board__button .button-disabled {
-  background: #474747;
+  background: #868585;
   cursor: not-allowed;
 }
 

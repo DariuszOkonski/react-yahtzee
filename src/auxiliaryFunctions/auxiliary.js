@@ -26,7 +26,12 @@ const drawDice = () => {
 export const getDices = () => {
     const dices = [];
     for (let i = 0; i < NumberOfDices; i++) {
-        dices.push(drawDice());
+        const dice = {
+            id: i,
+            active: true,
+            number: drawDice()
+        }
+        dices.push(dice);
     }
 
     return dices;
