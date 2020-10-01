@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../contexts/appContext'
 import Dice from './Dice'
 
 const BoardDices = () => {
-    const dices = [1,2,4,4,5]
+    const {dices} = useContext(AppContext);
 
-    
+
     return (  
         <div className="board__dices">
             {
