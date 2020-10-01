@@ -1,23 +1,14 @@
 import React from 'react'
+import Dice from './Dice'
 
 const BoardDices = () => {
+    const dices = [1,2,4,4,5]
+
     return (  
         <div className="board__dices">
-            <div className="dice">
-                <i className="fas fa-dice-one"></i>
-            </div>
-            <div className="dice">
-                <i className="fas fa-dice-two"></i>
-            </div>
-            <div className="dice">
-                <i className="fas fa-dice-three"></i>
-            </div>
-            <div className="dice">
-                <i className="fas fa-dice-four"></i>
-            </div>
-            <div className="dice">
-                <i className="fas fa-dice-six"></i>
-            </div>
+            {
+                dices.map((dice, index) => <Dice key={index} dice={dice} />)
+            }
         </div>
     );
 }
