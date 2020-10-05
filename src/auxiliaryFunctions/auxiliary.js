@@ -44,3 +44,9 @@ export const getDices = (dices) => {
     });
     return newDices;
 }
+
+export const freezeAllDices = (dices) => {
+    let newDices = [...dices];
+    newDices = newDices.map(dice => ({...dice, active: false}))
+    return newDices;
+}

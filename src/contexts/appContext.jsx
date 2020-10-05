@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import { getDices, getInitialDices } from '../auxiliaryFunctions/auxiliary';
+import { freezeAllDices, getDices, getInitialDices } from '../auxiliaryFunctions/auxiliary';
 
 export const AppContext = createContext();
 
@@ -8,9 +8,17 @@ const RollingTime = 2000;
 const AppContextProvider = (props) => {
     const [dices, setDices] = useState(getInitialDices());
     const [rolls, setRolls] = useState(false);
+    const [numberOfRollsLeft, setNumberOfRollsLeft] = useState(2);
 
-    const handleRollDices = () => {
-        toggleRolls();        
+    const handleRollDices = () => {        
+        if(numberOfRollsLeft === 0) {
+            setRolls(true);
+        } else {
+            setNumberOfRollsLeft(numberOfRollsLeft - 1);
+        }
+
+        toggleRolls();
+        
     }
 
     const handleToggleDice = (id) => {
@@ -29,13 +37,18 @@ const AppContextProvider = (props) => {
             const newDices = getDices(tempDices);
 
             setDices(newDices);
-            // setDices(getInitialDices());
-            setRolls(false);
+
+            if(numberOfRollsLeft === 0) {
+                setRolls(true);
+                setDices(freezeAllDices(dices));
+            } else {
+                setRolls(false);
+            }
         }, RollingTime);
     }
  
     return (  
-        <AppContext.Provider value={{dices, rolls, onHandleRollDices: handleRollDices, onHandleToggleDice: handleToggleDice}}>
+        <AppContext.Provider value={{dices, rolls, numberOfRollsLeft, onHandleRollDices: handleRollDices, onHandleToggleDice: handleToggleDice}}>
             {props.children}
         </AppContext.Provider>
     );

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { displayNumberOfDicesOnButton } from '../auxiliaryFunctions/auxiliary';
 import { AppContext } from '../contexts/appContext';
 
 const BoardButton = () => {
@@ -10,7 +11,7 @@ const BoardButton = () => {
                 disabled={rolls}
                 className={`button ${rolls && 'button-disabled'}`}
                 onClick={onHandleRollDices}
-            >2 Rolls Left</button>
+            >Roll Dice</button>
         </div>
     );
 }
