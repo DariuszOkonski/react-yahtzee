@@ -20,6 +20,11 @@ const AppContextProvider = (props) => {
         toggleRolls();        
     }
 
+    const handleRestartDices = () => {
+        setRolls(false);
+        setDices(getInitialDices());
+    }
+
     const handleToggleDice = (id) => {
         const newDices = [...dices];
         const dice = newDices.find(dice => dice.id === id);
