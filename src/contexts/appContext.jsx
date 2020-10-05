@@ -8,7 +8,7 @@ const RollingTime = 2000;
 const AppContextProvider = (props) => {
     const [dices, setDices] = useState(getInitialDices());
     const [rolls, setRolls] = useState(false);
-    const [numberOfRollsLeft, setNumberOfRollsLeft] = useState(2);
+    const [numberOfRollsLeft, setNumberOfRollsLeft] = useState(3);
 
     const handleRollDices = () => {        
         if(numberOfRollsLeft === 0) {
@@ -42,7 +42,7 @@ const AppContextProvider = (props) => {
 
             setDices(newDices);
 
-            if(numberOfRollsLeft === 0) {
+            if(numberOfRollsLeft === 1) {
                 setRolls(true);
                 setDices(freezeAllDices(dices));
             } else {

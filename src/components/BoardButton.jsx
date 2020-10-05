@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AppContext } from '../contexts/appContext';
 
 const BoardButton = () => {
-    const { onHandleRollDices, rolls } = useContext(AppContext);
+    const { onHandleRollDices, rolls, numberOfRollsLeft } = useContext(AppContext);
 
     return (  
         <div className="board__button">
@@ -10,7 +10,7 @@ const BoardButton = () => {
                 disabled={rolls}
                 className={`button ${rolls && 'button-disabled'}`}
                 onClick={onHandleRollDices}
-            >Roll Dice</button>
+            > {numberOfRollsLeft} {numberOfRollsLeft === 1 ? 'Roll' : 'Rolls'} left</button>
         </div>
     );
 }
