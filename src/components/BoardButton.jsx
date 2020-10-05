@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { displayNumberOfDicesOnButton } from '../auxiliaryFunctions/auxiliary';
 import { AppContext } from '../contexts/appContext';
 
 const BoardButton = () => {

@@ -17,8 +17,7 @@ const AppContextProvider = (props) => {
             setNumberOfRollsLeft(numberOfRollsLeft - 1);
         }
 
-        toggleRolls();
-        
+        toggleRolls();        
     }
 
     const handleToggleDice = (id) => {
