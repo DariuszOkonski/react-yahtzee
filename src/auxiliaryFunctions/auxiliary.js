@@ -38,8 +38,9 @@ export const getInitialDices = () => {
 }
 
 export const getDices = (dices) => {
-    console.log('TODO: getDices');
-    console.log(dices);
-
-    return dices;
+    let newDices = [...dices];
+    newDices = newDices.map(dice => {
+        return !dice.active ? dice : {...dice, number: drawDice()}
+    });
+    return newDices;
 }

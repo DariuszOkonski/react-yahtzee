@@ -33,7 +33,7 @@ const AppContextProvider = (props) => {
             setRolls(false);
         }, RollingTime);
     }
-
+ 
     return (  
         <AppContext.Provider value={{dices, rolls, onHandleRollDices: handleRollDices, onHandleToggleDice: handleToggleDice}}>
             {props.children}
