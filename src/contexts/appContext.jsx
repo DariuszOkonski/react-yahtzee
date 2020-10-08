@@ -4,11 +4,12 @@ import { freezeAllDices, getDices, getInitialDices } from '../auxiliaryFunctions
 export const AppContext = createContext();
 
 const RollingTime = 2000;
+const NumberOfRollsAtOneGame = 3;
 
 const AppContextProvider = (props) => {
     const [dices, setDices] = useState(getInitialDices());
     const [rolls, setRolls] = useState(false);
-    const [numberOfRollsLeft, setNumberOfRollsLeft] = useState(3);
+    const [numberOfRollsLeft, setNumberOfRollsLeft] = useState(NumberOfRollsAtOneGame);
 
     const handleRollDices = () => {        
         if(numberOfRollsLeft === 0) {
@@ -23,6 +24,7 @@ const AppContextProvider = (props) => {
     const handleRestartDices = () => {
         setRolls(false);
         setDices(getInitialDices());
+        setNumberOfRollsLeft(NumberOfRollsAtOneGame);
     }
 
     const handleToggleDice = (id) => {
@@ -52,7 +54,14 @@ const AppContextProvider = (props) => {
     }
  
     return (  
-        <AppContext.Provider value={{dices, rolls, numberOfRollsLeft, onHandleRollDices: handleRollDices, onHandleToggleDice: handleToggleDice}}>
+        <AppContext.Provider value={{
+            dices, 
+            rolls, 
+            numberOfRollsLeft, 
+            onHandleRollDices: handleRollDices, 
+            onHandleToggleDice: handleToggleDice,
+            onHandleRestartDices: handleRestartDices
+        }}>
             {props.children}
         </AppContext.Provider>
     );
